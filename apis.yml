@@ -1,0 +1,113 @@
+---
+aid: university-of-north-carolina-at-chapel-hill
+name: University of North Carolina at Chapel Hill
+description: >-
+  The University of North Carolina at Chapel Hill is a leading public research
+  university in Chapel Hill, North Carolina, United States, ranked #155 in the QS
+  World University Rankings 2025. Its public developer and API footprint is
+  centered on research and open-data infrastructure rather than a single unified
+  developer portal: UNC Dataverse exposes a live, documented native REST API for
+  social-science and research data (running Dataverse 6.8), the campus ArcGIS Hub
+  open-data site publishes geospatial data through DCAT-US feeds and ArcGIS REST
+  services, and the UNC Libraries software-development team maintains a public
+  GitHub organization with the box-c Digital Collections Repository and other
+  open-source tooling. Most administrative and student-information-system APIs
+  (such as the Facilities SPOTS REST API and campus single sign-on) are gated
+  behind Onyen/Shibboleth authentication.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Research Data
+  - Open Data
+  - Geospatial
+  - Digital Library
+  - United States
+  - North Carolina
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: university-of-north-carolina-at-chapel-hill:dataverse
+    name: UNC Dataverse API
+    description: >-
+      Native REST API for UNC Dataverse, the university's research data
+      repository supported by the Office of the Vice Chancellor for Research.
+      The API supports searching, depositing, downloading and managing datasets
+      and dataverse collections, and is documented as part of the open-source
+      Dataverse software (the live instance reports version 6.8 via
+      /api/info/version).
+    humanURL: https://guides.dataverse.org/en/latest/api/
+    baseURL: https://dataverse.unc.edu/api
+    tags: [ Research Data, Repository, Dataverse, Open Data ]
+    properties:
+      - type: Documentation
+        url: https://guides.dataverse.org/en/latest/api/
+      - type: Website
+        url: https://dataverse.unc.edu/
+  - aid: university-of-north-carolina-at-chapel-hill:gis-opendata
+    name: UNC GIS Open Data Hub
+    description: >-
+      UNC-Chapel Hill's ArcGIS Hub open-data site publishing geospatial and
+      institutional datasets. Data is programmatically accessible via ArcGIS Hub
+      DCAT-US 1.1 catalog feeds and the underlying ArcGIS REST / GeoServices
+      endpoints (GeoJSON, CSV, and feature service queries).
+    humanURL: https://gisdata-uncadmin.opendata.arcgis.com/
+    baseURL: https://gisdata-uncadmin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+    tags: [ Geospatial, GIS, Open Data, ArcGIS ]
+    properties:
+      - type: Documentation
+        url: https://gisdata-uncadmin.opendata.arcgis.com/
+  - aid: university-of-north-carolina-at-chapel-hill:digital-collections
+    name: UNC Libraries Digital Collections Repository (box-c)
+    description: >-
+      The UNC Libraries Digital Collections Repository, powered by the
+      open-source box-c application maintained by the UNC Libraries software
+      development team on GitHub. Provides web access to digitized special
+      collections; the application source and supporting tooling are publicly
+      available, and the platform participates in standard library
+      interoperability patterns.
+    humanURL: https://dc.lib.unc.edu/
+    tags: [ Digital Library, Repository, Special Collections ]
+    properties:
+      - type: Documentation
+        url: https://dc.lib.unc.edu/
+      - type: GitHub
+        url: https://github.com/UNC-Libraries/box-c
+  - aid: university-of-north-carolina-at-chapel-hill:spots
+    name: Facilities SPOTS REST API
+    description: >-
+      REST API for the Space Planning and Occupancy Tracking System (SPOTS)
+      provided by UNC Facilities Services for campus space and occupancy data.
+      Documentation is gated behind UNC Onyen single sign-on and is not publicly
+      accessible; listed here for completeness.
+    humanURL: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+    tags: [ Facilities, Space Management, Gated ]
+    properties:
+      - type: Documentation
+        url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+common:
+  - type: Website
+    url: https://www.unc.edu/
+  - type: GitHub
+    url: https://github.com/unc-libraries
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/unc-chapel-hill/
+  - type: Authentication
+    url: https://sso.unc.edu/
+  - type: Plans
+    url: plans/university-of-north-carolina-at-chapel-hill-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/university-of-north-carolina-at-chapel-hill-rate-limits.yml
+  - type: FinOps
+    url: finops/university-of-north-carolina-at-chapel-hill-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

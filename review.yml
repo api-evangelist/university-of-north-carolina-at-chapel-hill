@@ -1,0 +1,57 @@
+---
+name: University of North Carolina at Chapel Hill
+description: University of North Carolina at Chapel Hill public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 3
+    summary: >-
+      UNC-Chapel Hill has a real but decentralized public API footprint. Verified
+      live: the UNC Dataverse native REST API (returns version 6.8 from
+      /api/info/version) and the ArcGIS Hub GIS open-data DCAT-US feed (HTTP 200).
+      The UNC Libraries GitHub organization is real with 84 public repos including
+      the box-c Digital Collections Repository, whose site (dc.lib.unc.edu) is
+      live. The Facilities SPOTS REST API exists but its docs are Onyen-gated, and
+      the OIRA "API List" page resolves but contains no published API specs.
+      Campus SSO (sso.unc.edu) and Onyen handle authentication. No single unified
+      public developer portal was found. No endpoints were fabricated; gated and
+      empty resources are noted honestly.
+    endpoints:
+      - url: https://dataverse.unc.edu/api/info/version
+        status: 200
+        note: Live native Dataverse REST API, returns {"version":"6.8"}.
+      - url: https://guides.dataverse.org/en/latest/api/
+        status: 200
+        note: Dataverse software API documentation (applies to the UNC instance).
+      - url: https://gisdata-uncadmin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+        status: 200
+        note: ArcGIS Hub DCAT-US 1.1 open-data catalog feed.
+      - url: https://gisdata-uncadmin.opendata.arcgis.com/
+        status: 200
+        note: UNC GIS Open Data Hub landing site.
+      - url: https://dc.lib.unc.edu/
+        status: 200
+        note: UNC Libraries Digital Collections Repository (box-c) live site.
+      - url: https://github.com/unc-libraries
+        status: 200
+        note: Real UNC Libraries GitHub org, 84 public repositories.
+      - url: https://github.com/UNC-Libraries/box-c
+        status: 200
+        note: Open-source Digital Collections Repository application source.
+      - url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+        status: 200
+        note: SPOTS REST API page resolves but content is Onyen-gated.
+      - url: https://oira.unc.edu/unc-chapel-hill-api-list/
+        status: 200
+        note: OIRA "API List" page resolves but publishes no actual API specs.
+      - url: https://sso.unc.edu/
+        status: 200
+        note: Campus single sign-on (Onyen/Shibboleth) authentication.
+      - url: https://www.unc.edu/
+        status: 200
+        note: Official university website.
+      - url: https://www.linkedin.com/school/unc-chapel-hill/
+        status: 999
+        note: LinkedIn school page; 999 is expected bot-blocking, page exists.
