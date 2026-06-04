@@ -50,6 +50,26 @@ apis:
         url: https://guides.dataverse.org/en/latest/api/
       - type: Website
         url: https://dataverse.unc.edu/
+      - type: OpenAPI
+        url: openapi/university-of-north-carolina-at-chapel-hill-dataverse.yaml
+      - type: x-json-schema
+        url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+      - type: x-json-schema
+        url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+      - type: x-json-structure
+        url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+      - type: x-json-structure
+        url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+      - type: x-example
+        url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+      - type: x-example
+        url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+      - type: x-spectral-rules
+        url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+      - type: x-vocabulary
+        url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+      - type: x-json-ld
+        url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
   - aid: university-of-north-carolina-at-chapel-hill:gis-opendata
     name: UNC GIS Open Data Hub
     description: >-

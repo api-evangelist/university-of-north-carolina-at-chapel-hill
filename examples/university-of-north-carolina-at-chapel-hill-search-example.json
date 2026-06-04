@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://dataverse.unc.edu/api/search?q=*&type=dataset&per_page=2",
+    "headers": {
+      "X-Dataverse-key": "<API token; required on this instance, returns 401 without it>"
+    }
+  },
+  "response": {
+    "status": "OK",
+    "data": {
+      "q": "*",
+      "total_count": 0,
+      "start": 0,
+      "spelling_alternatives": {},
+      "items": [
+        {
+          "name": "Example Dataset Title",
+          "type": "dataset",
+          "url": "https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/EXAMPLE",
+          "global_id": "doi:10.15139/S3/EXAMPLE",
+          "description": "Representative shape of a Dataverse search result item; structure per the Dataverse 6.8 /search endpoint. Live values omitted because this UNC instance requires an API token (HTTP 401 anonymous)."
+        }
+      ],
+      "count_in_response": 1
+    }
+  }
+}

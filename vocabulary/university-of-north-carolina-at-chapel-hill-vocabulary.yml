@@ -1,0 +1,54 @@
+---
+vocabulary:
+  name: UNC Dataverse API Vocabulary
+  description: >-
+    Controlled vocabulary of core terms used by the UNC Dataverse Native REST API
+    (Dataverse 6.8), the University of North Carolina at Chapel Hill research data
+    repository. Terms are drawn from the live OpenAPI definition served at
+    https://dataverse.unc.edu/openapi and standard Dataverse data-model concepts.
+  version: "6.8"
+  terms:
+    - term: Dataverse
+      definition: >-
+        A container (collection) that holds datasets and/or other dataverses;
+        the top-level organizing unit of the repository.
+      tags: [collection, container]
+    - term: Dataset
+      definition: >-
+        A container for a set of data files plus descriptive metadata and a
+        persistent identifier (DOI); the citable unit of deposit.
+      tags: [object, citable]
+    - term: DatasetVersion
+      definition: >-
+        A specific draft or published version of a dataset, including its
+        file metadata, terms of use, and dataset fields.
+      tags: [object, versioning]
+    - term: DataFile
+      definition: >-
+        An individual file stored within a dataset version.
+      tags: [object, file]
+    - term: PersistentIdentifier
+      definition: >-
+        A globally unique, resolvable identifier (protocol + authority +
+        identifier, e.g. a DOI) assigned to datasets and files.
+      tags: [identifier, doi]
+    - term: API Token
+      definition: >-
+        The X-Dataverse-key credential used to authenticate Native API requests;
+        required on the UNC instance for search and most operations.
+      tags: [auth, credential]
+    - term: Search
+      definition: >-
+        The /search endpoint that queries dataverses, datasets, and files using
+        Solr-backed query syntax.
+      tags: [operation, discovery]
+    - term: Info Version
+      definition: >-
+        The /info/version endpoint returning the running Dataverse software
+        version and build (reports 6.8 on the UNC instance).
+      tags: [operation, metadata]
+    - term: Metadata Block
+      definition: >-
+        A named group of dataset metadata fields (e.g. citation, geospatial)
+        configured at the repository level.
+      tags: [metadata, schema]

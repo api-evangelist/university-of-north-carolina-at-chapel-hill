@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://dataverse.unc.edu/api/info/version"
+  },
+  "response": {
+    "status": "OK",
+    "data": {
+      "version": "6.8",
+      "build": "with-mdq-bugfix"
+    }
+  }
+}

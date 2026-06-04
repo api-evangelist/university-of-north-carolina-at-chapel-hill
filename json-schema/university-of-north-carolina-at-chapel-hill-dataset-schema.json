@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/main/json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json",
+  "title": "Dataverse Dataset",
+  "description": "JSON Schema for a Dataverse Dataset object as exposed by the UNC Dataverse Native REST API (Dataverse 6.8). Derived from the live /openapi components.schemas.Dataset definition; only fields genuinely present in the spec are included.",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer", "format": "int64", "description": "Internal numeric identifier of the dataset." },
+    "storageIdentifier": { "type": "string", "description": "Storage location identifier for the dataset." },
+    "dtype": { "type": "string", "description": "Dataverse object type discriminator." },
+    "protocol": { "type": "string", "description": "Persistent identifier protocol (e.g. doi, hdl)." },
+    "authority": { "type": "string", "description": "Persistent identifier authority (e.g. DOI prefix)." },
+    "identifier": { "type": "string", "description": "Persistent identifier value within the authority." },
+    "separator": { "type": "string", "description": "Separator used in the persistent identifier." },
+    "globalIdCreateTime": { "type": "string", "format": "date", "example": "2022-03-10", "description": "Date the global identifier was created/registered." },
+    "identifierRegistered": { "type": "boolean", "description": "Whether the persistent identifier is registered." },
+    "released": { "type": "boolean", "description": "Whether the dataset has been released/published." },
+    "previewImageAvailable": { "type": "boolean", "description": "Whether a preview image is available." },
+    "previewImageFail": { "type": "boolean", "description": "Whether preview image generation failed." },
+    "mergeable": { "type": "boolean", "description": "Whether the dataset is mergeable." },
+    "instanceofDataverse": { "type": "boolean" },
+    "instanceofDataset": { "type": "boolean" },
+    "instanceofDataFile": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

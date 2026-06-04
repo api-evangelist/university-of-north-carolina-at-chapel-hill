@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/main/json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json",
+  "title": "Dataverse Info Version Response",
+  "description": "JSON Schema for the response of GET /api/info/version on the UNC Dataverse Native REST API. Confirmed against the live UNC instance.",
+  "type": "object",
+  "required": ["status", "data"],
+  "properties": {
+    "status": { "type": "string", "enum": ["OK", "ERROR"], "description": "API response status." },
+    "data": {
+      "type": "object",
+      "required": ["version"],
+      "properties": {
+        "version": { "type": "string", "description": "Dataverse software version.", "example": "6.8" },
+        "build": { "type": "string", "description": "Build identifier of the running instance.", "example": "with-mdq-bugfix" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

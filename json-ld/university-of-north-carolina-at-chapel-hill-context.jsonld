@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dvcore": "https://dataverse.org/schema/core#",
+    "@vocab": "https://dataverse.unc.edu/vocab#",
+
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+    "version": "schema:version",
+
+    "Organization": {
+      "@id": "schema:CollegeOrUniversity",
+      "@context": {
+        "name": "schema:name",
+        "url": "schema:url"
+      }
+    },
+
+    "Dataverse": "dvcore:Dataverse",
+    "Dataset": {
+      "@id": "schema:Dataset",
+      "@context": {
+        "id": "schema:identifier",
+        "identifier": "schema:identifier",
+        "globalId": { "@id": "schema:identifier" },
+        "protocol": "@vocab",
+        "authority": "@vocab",
+        "released": "@vocab",
+        "storageIdentifier": "@vocab"
+      }
+    },
+    "DataFile": {
+      "@id": "schema:MediaObject"
+    },
+    "DatasetVersion": {
+      "@id": "dvcore:DatasetVersion",
+      "@context": {
+        "versionNumber": "schema:version",
+        "title": "schema:name",
+        "description": "schema:description",
+        "createTime": "schema:dateCreated",
+        "releaseTime": "schema:datePublished"
+      }
+    },
+
+    "status": "@vocab",
+    "data": "@vocab",
+    "build": "@vocab"
+  },
+
+  "@id": "https://www.unc.edu/",
+  "@type": "Organization",
+  "name": "University of North Carolina at Chapel Hill",
+  "url": "https://www.unc.edu/",
+  "description": "Public research university; operates UNC Dataverse, a research data repository running Dataverse 6.8 with a documented Native REST API."
+}

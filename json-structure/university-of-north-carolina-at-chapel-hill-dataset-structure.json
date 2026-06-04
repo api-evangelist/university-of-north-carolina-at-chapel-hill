@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/main/json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json",
+  "name": "DataverseDataset",
+  "description": "JSON Structure for a Dataverse Dataset object exposed by the UNC Dataverse Native REST API (Dataverse 6.8).",
+  "type": "object",
+  "properties": {
+    "id": { "type": "int64" },
+    "storageIdentifier": { "type": "string" },
+    "dtype": { "type": "string" },
+    "protocol": { "type": "string" },
+    "authority": { "type": "string" },
+    "identifier": { "type": "string" },
+    "globalIdCreateTime": { "type": "string", "format": "date" },
+    "identifierRegistered": { "type": "boolean" },
+    "released": { "type": "boolean" },
+    "previewImageAvailable": { "type": "boolean" }
+  },
+  "required": ["id", "dtype"]
+}

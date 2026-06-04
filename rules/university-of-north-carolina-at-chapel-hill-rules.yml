@@ -1,0 +1,45 @@
+---
+# Spectral ruleset encoding observed patterns of the UNC Dataverse Native REST API (Dataverse 6.8).
+# Derived from the live /openapi document at https://dataverse.unc.edu/openapi
+formats:
+  - oas3
+rules:
+  unc-dataverse-info-title:
+    description: API title should identify the Dataverse API.
+    given: $.info.title
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "Dataverse"
+
+  unc-dataverse-server-host:
+    description: A server pointing at the UNC Dataverse instance should be declared.
+    given: $.servers[*].url
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: "dataverse\\.unc\\.edu"
+
+  unc-dataverse-operation-tags:
+    description: Every operation should carry at least one tag (Dataverse groups operations by tag).
+    given: $.paths[*][get,post,put,delete,patch]
+    severity: warn
+    then:
+      field: tags
+      function: truthy
+
+  unc-dataverse-api-key-auth:
+    description: Dataverse uses an X-Dataverse-key API token for authenticated operations.
+    given: $.components.securitySchemes
+    severity: info
+    then:
+      function: defined
+
+  unc-dataverse-paths-lowercase:
+    description: Paths should be lower-case kebab/slash style as used throughout the Dataverse API.
+    given: $.paths
+    severity: hint
+    then:
+      function: alphabetical

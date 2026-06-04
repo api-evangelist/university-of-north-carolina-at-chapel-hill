@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/main/json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json",
+  "name": "DataverseInfoVersion",
+  "description": "JSON Structure for the GET /api/info/version response of the UNC Dataverse Native REST API.",
+  "type": "object",
+  "properties": {
+    "status": { "type": "string" },
+    "data": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string" },
+        "build": { "type": "string" }
+      },
+      "required": ["version"]
+    }
+  },
+  "required": ["status", "data"]
+}
