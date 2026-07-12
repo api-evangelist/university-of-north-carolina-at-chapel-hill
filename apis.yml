@@ -112,6 +112,8 @@ apis:
       - type: Documentation
         url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
 common:
+  - type: DomainSecurity
+    url: security/university-of-north-carolina-at-chapel-hill-domain-security.yml
   - type: Website
     url: https://www.unc.edu/
   - type: GitHub
@@ -128,6 +130,8 @@ common:
     url: finops/university-of-north-carolina-at-chapel-hill-finops.yml
   - type: Review
     url: review.yml
+  - url: https://www.unc.edu/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
