@@ -1,0 +1,14 @@
+{
+  "repo": "university-of-north-carolina-at-chapel-hill",
+  "feeds": [
+    {
+      "source": "https://www.unc.edu/feed/",
+      "feed_url": "https://www.unc.edu/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 20
+}
