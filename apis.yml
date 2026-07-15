@@ -112,6 +112,8 @@ apis:
       - type: Documentation
         url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
 common:
+  - type: AgenticAccess
+    url: agentic-access/university-of-north-carolina-at-chapel-hill-agentic-access.yml
   - type: DomainSecurity
     url: security/university-of-north-carolina-at-chapel-hill-domain-security.yml
   - type: Website
