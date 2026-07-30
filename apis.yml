@@ -15,9 +15,21 @@ description: >-
   (such as the Facilities SPOTS REST API and campus single sign-on) are gated
   behind Onyen/Shibboleth authentication.
 type: Index
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-north-carolina-at-chapel-hill.png
 url: https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/refs/heads/main/apis.yml
 tags:
   - Education
@@ -33,84 +45,1273 @@ created: '2026-06-03'
 modified: '2026-06-03'
 specificationVersion: '0.19'
 apis:
-  - aid: university-of-north-carolina-at-chapel-hill:dataverse
-    name: UNC Dataverse API
-    description: >-
-      Native REST API for UNC Dataverse, the university's research data
-      repository supported by the Office of the Vice Chancellor for Research.
-      The API supports searching, depositing, downloading and managing datasets
-      and dataverse collections, and is documented as part of the open-source
-      Dataverse software (the live instance reports version 6.8 via
-      /api/info/version).
-    humanURL: https://guides.dataverse.org/en/latest/api/
-    baseURL: https://dataverse.unc.edu/api
-    tags: [ Research Data, Repository, Dataverse, Open Data ]
-    properties:
-      - type: Documentation
-        url: https://guides.dataverse.org/en/latest/api/
-      - type: Website
-        url: https://dataverse.unc.edu/
-      - type: OpenAPI
-        url: openapi/university-of-north-carolina-at-chapel-hill-dataverse.yaml
-      - type: x-json-schema
-        url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
-      - type: x-json-schema
-        url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
-      - type: x-json-structure
-        url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
-      - type: x-json-structure
-        url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
-      - type: x-example
-        url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
-      - type: x-example
-        url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
-      - type: x-spectral-rules
-        url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
-      - type: x-vocabulary
-        url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
-      - type: x-json-ld
-        url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
-  - aid: university-of-north-carolina-at-chapel-hill:gis-opendata
-    name: UNC GIS Open Data Hub
-    description: >-
-      UNC-Chapel Hill's ArcGIS Hub open-data site publishing geospatial and
-      institutional datasets. Data is programmatically accessible via ArcGIS Hub
-      DCAT-US 1.1 catalog feeds and the underlying ArcGIS REST / GeoServices
-      endpoints (GeoJSON, CSV, and feature service queries).
-    humanURL: https://gisdata-uncadmin.opendata.arcgis.com/
-    baseURL: https://gisdata-uncadmin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
-    tags: [ Geospatial, GIS, Open Data, ArcGIS ]
-    properties:
-      - type: Documentation
-        url: https://gisdata-uncadmin.opendata.arcgis.com/
-  - aid: university-of-north-carolina-at-chapel-hill:digital-collections
-    name: UNC Libraries Digital Collections Repository (box-c)
-    description: >-
-      The UNC Libraries Digital Collections Repository, powered by the
-      open-source box-c application maintained by the UNC Libraries software
-      development team on GitHub. Provides web access to digitized special
-      collections; the application source and supporting tooling are publicly
-      available, and the platform participates in standard library
-      interoperability patterns.
-    humanURL: https://dc.lib.unc.edu/
-    tags: [ Digital Library, Repository, Special Collections ]
-    properties:
-      - type: Documentation
-        url: https://dc.lib.unc.edu/
-      - type: GitHub
-        url: https://github.com/UNC-Libraries/box-c
-  - aid: university-of-north-carolina-at-chapel-hill:spots
-    name: Facilities SPOTS REST API
-    description: >-
-      REST API for the Space Planning and Occupancy Tracking System (SPOTS)
-      provided by UNC Facilities Services for campus space and occupancy data.
-      Documentation is gated behind UNC Onyen single sign-on and is not publicly
-      accessible; listed here for completeness.
-    humanURL: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
-    tags: [ Facilities, Space Management, Gated ]
-    properties:
-      - type: Documentation
-        url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+- aid: university-of-north-carolina-at-chapel-hill:gis-opendata
+  name: UNC GIS Open Data Hub
+  description: >-
+    UNC-Chapel Hill's ArcGIS Hub open-data site publishing geospatial and institutional datasets. Data
+    is programmatically accessible via ArcGIS Hub DCAT-US 1.1 catalog feeds and the underlying ArcGIS
+    REST / GeoServices endpoints (GeoJSON, CSV, and feature service queries).
+  humanURL: https://gisdata-uncadmin.opendata.arcgis.com/
+  baseURL: https://gisdata-uncadmin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+  tags:
+  - Geospatial
+  - GIS
+  - Open Data
+  - ArcGIS
+  properties:
+  - type: Documentation
+    url: https://gisdata-uncadmin.opendata.arcgis.com/
+- aid: university-of-north-carolina-at-chapel-hill:digital-collections
+  name: UNC Libraries Digital Collections Repository (box-c)
+  description: >-
+    The UNC Libraries Digital Collections Repository, powered by the open-source box-c application maintained
+    by the UNC Libraries software development team on GitHub. Provides web access to digitized special
+    collections; the application source and supporting tooling are publicly available, and the platform
+    participates in standard library interoperability patterns.
+  humanURL: https://dc.lib.unc.edu/
+  tags:
+  - Digital Library
+  - Repository
+  - Special Collections
+  properties:
+  - type: Documentation
+    url: https://dc.lib.unc.edu/
+  - type: GitHub
+    url: https://github.com/UNC-Libraries/box-c
+- aid: university-of-north-carolina-at-chapel-hill:spots
+  name: Facilities SPOTS REST API
+  description: >-
+    REST API for the Space Planning and Occupancy Tracking System (SPOTS) provided by UNC Facilities Services
+    for campus space and occupancy data. Documentation is gated behind UNC Onyen single sign-on and is
+    not publicly accessible; listed here for completeness.
+  humanURL: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+  tags:
+  - Facilities
+  - Space Management
+  - Gated
+  properties:
+  - type: Documentation
+    url: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-access-api
+  name: University of North Carolina at Chapel Hill Access API
+  description: >-
+    The Access API from University of North Carolina at Chapel Hill — 23 operation(s) for access.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Access
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-access-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-addfilestodataset-api
+  name: University of North Carolina at Chapel Hill addFilesToDataset API
+  description: Uploads a set of files to a dataset
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - addFilesToDataset
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-addfilestodataset-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-addfiletodataset-api
+  name: University of North Carolina at Chapel Hill addFileToDataset API
+  description: Uploads a file for a dataset
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - addFileToDataset
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-addfiletodataset-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-addglobusfilestodataset-api
+  name: University of North Carolina at Chapel Hill addGlobusFilesToDataset API
+  description: Uploads a Globus file for a dataset
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - addGlobusFilesToDataset
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/university-of-north-carolina-at-chapel-hill-addglobusfilestodataset-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-admin-api
+  name: University of North Carolina at Chapel Hill Admin API
+  description: >-
+    The Admin API from University of North Carolina at Chapel Hill — 127 operation(s) for admin.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Admin
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-admin-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-batch-api
+  name: University of North Carolina at Chapel Hill Batch API
+  description: >-
+    The Batch API from University of North Carolina at Chapel Hill — 3 operation(s) for batch.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Batch
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-batch-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-builtin-users-api
+  name: University of North Carolina at Chapel Hill Builtin Users API
+  description: >-
+    The Builtin Users API from University of North Carolina at Chapel Hill — 4 operation(s) for builtin
+    users.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Builtin Users
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-builtin-users-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-datasetfields-api
+  name: University of North Carolina at Chapel Hill Datasetfields API
+  description: >-
+    The Datasetfields API from University of North Carolina at Chapel Hill — 1 operation(s) for datasetfields.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Datasetfields
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-datasetfields-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-datasets-api
+  name: University of North Carolina at Chapel Hill Datasets API
+  description: >-
+    The Datasets API from University of North Carolina at Chapel Hill — 94 operation(s) for datasets.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-datatags-api
+  name: University of North Carolina at Chapel Hill Datatags API
+  description: >-
+    The Datatags API from University of North Carolina at Chapel Hill — 1 operation(s) for datatags.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Datatags
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-datatags-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-dataversefeatureditems-api
+  name: University of North Carolina at Chapel Hill DataverseFeaturedItems API
+  description: >-
+    The DataverseFeaturedItems API from University of North Carolina at Chapel Hill — 1 operation(s) for
+    dataversefeatureditems.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - DataverseFeaturedItems
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/university-of-north-carolina-at-chapel-hill-dataversefeatureditems-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-dataverses-api
+  name: University of North Carolina at Chapel Hill Dataverses API
+  description: >-
+    The Dataverses API from University of North Carolina at Chapel Hill — 40 operation(s) for dataverses.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Dataverses
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-dataverses-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-edit-api
+  name: University of North Carolina at Chapel Hill Edit API
+  description: The Edit API from University of North Carolina at Chapel Hill — 1 operation(s) for edit.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Edit
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-edit-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-externaltools-api
+  name: University of North Carolina at Chapel Hill ExternalTools API
+  description: >-
+    The ExternalTools API from University of North Carolina at Chapel Hill — 2 operation(s) for externaltools.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - ExternalTools
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-externaltools-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-files-api
+  name: University of North Carolina at Chapel Hill Files API
+  description: >-
+    The Files API from University of North Carolina at Chapel Hill — 21 operation(s) for files.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-files-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-harvest-api
+  name: University of North Carolina at Chapel Hill Harvest API
+  description: >-
+    The Harvest API from University of North Carolina at Chapel Hill — 7 operation(s) for harvest.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Harvest
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-harvest-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-inbox-api
+  name: University of North Carolina at Chapel Hill Inbox API
+  description: >-
+    The Inbox API from University of North Carolina at Chapel Hill — 1 operation(s) for inbox.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Inbox
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-inbox-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-info-api
+  name: University of North Carolina at Chapel Hill Info API
+  description: >-
+    The Info API from University of North Carolina at Chapel Hill — 50 operation(s) for info.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Info
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-info-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-ingest-api
+  name: University of North Carolina at Chapel Hill Ingest API
+  description: >-
+    The Ingest API from University of North Carolina at Chapel Hill — 1 operation(s) for ingest.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Ingest
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-ingest-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-licenses-api
+  name: University of North Carolina at Chapel Hill Licenses API
+  description: >-
+    The Licenses API from University of North Carolina at Chapel Hill — 6 operation(s) for licenses.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Licenses
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-licenses-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-localcontexts-api
+  name: University of North Carolina at Chapel Hill Localcontexts API
+  description: >-
+    The Localcontexts API from University of North Carolina at Chapel Hill — 2 operation(s) for localcontexts.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Localcontexts
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-localcontexts-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-logout-api
+  name: University of North Carolina at Chapel Hill Logout API
+  description: >-
+    The Logout API from University of North Carolina at Chapel Hill — 1 operation(s) for logout.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Logout
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-logout-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-mail-api
+  name: University of North Carolina at Chapel Hill Mail API
+  description: The Mail API from University of North Carolina at Chapel Hill — 1 operation(s) for mail.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Mail
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-mail-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-meta-api
+  name: University of North Carolina at Chapel Hill Meta API
+  description: The Meta API from University of North Carolina at Chapel Hill — 2 operation(s) for meta.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-meta-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-metadatablocks-api
+  name: University of North Carolina at Chapel Hill Metadatablocks API
+  description: >-
+    The Metadatablocks API from University of North Carolina at Chapel Hill — 2 operation(s) for metadatablocks.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Metadatablocks
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-metadatablocks-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-mydata-api
+  name: University of North Carolina at Chapel Hill Mydata API
+  description: >-
+    The Mydata API from University of North Carolina at Chapel Hill — 2 operation(s) for mydata.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Mydata
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-mydata-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-notifications-api
+  name: University of North Carolina at Chapel Hill Notifications API
+  description: >-
+    The Notifications API from University of North Carolina at Chapel Hill — 8 operation(s) for notifications.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-notifications-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-pids-api
+  name: University of North Carolina at Chapel Hill Pids API
+  description: The Pids API from University of North Carolina at Chapel Hill — 6 operation(s) for pids.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Pids
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-pids-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-replacefilesindataset-api
+  name: University of North Carolina at Chapel Hill replaceFilesInDataset API
+  description: Replace a file to a dataset
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - replaceFilesInDataset
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/university-of-north-carolina-at-chapel-hill-replacefilesindataset-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-roles-api
+  name: University of North Carolina at Chapel Hill Roles API
+  description: >-
+    The Roles API from University of North Carolina at Chapel Hill — 3 operation(s) for roles.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Roles
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-roles-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-saveauxiliaryfilewithversion-api
+  name: University of North Carolina at Chapel Hill saveAuxiliaryFileWithVersion API
+  description: Save Auxiliary File With Version
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - saveAuxiliaryFileWithVersion
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/university-of-north-carolina-at-chapel-hill-saveauxiliaryfilewithversion-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-search-api
+  name: University of North Carolina at Chapel Hill Search API
+  description: >-
+    The Search API from University of North Carolina at Chapel Hill — 2 operation(s) for search.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-search-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-sendfeedback-api
+  name: University of North Carolina at Chapel Hill Sendfeedback API
+  description: >-
+    The Sendfeedback API from University of North Carolina at Chapel Hill — 1 operation(s) for sendfeedback.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Sendfeedback
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-sendfeedback-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-uploaddatasetlogo-api
+  name: University of North Carolina at Chapel Hill uploadDatasetLogo API
+  description: Uploads a logo for a dataset
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - uploadDatasetLogo
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-uploaddatasetlogo-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-users-api
+  name: University of North Carolina at Chapel Hill Users API
+  description: >-
+    The Users API from University of North Carolina at Chapel Hill — 10 operation(s) for users.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-users-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
+- aid: >-
+    university-of-north-carolina-at-chapel-hill:university-of-north-carolina-at-chapel-hill-workflows-api
+  name: University of North Carolina at Chapel Hill Workflows API
+  description: >-
+    The Workflows API from University of North Carolina at Chapel Hill — 1 operation(s) for workflows.
+  humanURL: https://guides.dataverse.org/en/latest/api/
+  baseURL: https://dataverse.unc.edu/api
+  tags:
+  - Workflows
+  properties:
+  - type: OpenAPI
+    url: openapi/university-of-north-carolina-at-chapel-hill-workflows-api-openapi.yml
+  - type: Documentation
+    url: https://guides.dataverse.org/en/latest/api/
+  - type: Website
+    url: https://dataverse.unc.edu/
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-dataset-schema.json
+  - type: x-json-schema
+    url: json-schema/university-of-north-carolina-at-chapel-hill-info-version-schema.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-dataset-structure.json
+  - type: x-json-structure
+    url: json-structure/university-of-north-carolina-at-chapel-hill-info-version-structure.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-info-version-example.json
+  - type: x-example
+    url: examples/university-of-north-carolina-at-chapel-hill-search-example.json
+  - type: x-spectral-rules
+    url: rules/university-of-north-carolina-at-chapel-hill-rules.yml
+  - type: x-vocabulary
+    url: vocabulary/university-of-north-carolina-at-chapel-hill-vocabulary.yml
+  - type: x-json-ld
+    url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/university-of-north-carolina-at-chapel-hill-agentic-access.yml
