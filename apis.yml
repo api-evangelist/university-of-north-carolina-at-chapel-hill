@@ -43,7 +43,7 @@ tags:
   - North Carolina
 created: '2026-06-03'
 modified: '2026-06-03'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: university-of-north-carolina-at-chapel-hill:gis-opendata
   name: UNC GIS Open Data Hub
