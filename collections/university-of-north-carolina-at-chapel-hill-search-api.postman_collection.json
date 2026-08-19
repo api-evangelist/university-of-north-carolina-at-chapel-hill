@@ -1,0 +1,353 @@
+{
+  "item": [
+    {
+      "id": "8458949a-bc22-4b68-858b-9fadfe9d455b",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3eebfc56-b17d-4310-a9c1-ab07aea605e5",
+          "name": "Search search",
+          "request": {
+            "name": "Search search",
+            "description": {},
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fq",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fq",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "geo_point",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "geo_radius",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metadata_fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metadata_fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "order",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "query_entities",
+                  "value": "true"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_service",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_api_urls",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_collections",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_entity_ids",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_facets",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_relevance",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_type_counts",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "subtree",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "subtree",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a23a981-047f-4c4d-9214-ad16abe1a8c7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fq",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fq",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "geo_point",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "geo_radius",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metadata_fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metadata_fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "order",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query_entities",
+                      "value": "true"
+                    },
+                    {
+                      "key": "search_service",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "show_api_urls",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_collections",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_entity_ids",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_facets",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_relevance",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_type_counts",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "subtree",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "subtree",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b6576287-c694-400f-b0f7-2824219cf8f1",
+          "name": "Search get Search Engines",
+          "request": {
+            "name": "Search get Search Engines",
+            "description": {},
+            "url": {
+              "path": [
+                "search",
+                "services"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5b5ef6c2-c864-45a9-adb4-4feb7c7dca23",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "services"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://dataverse.unc.edu/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e1dd0cb0-b129-4435-b09b-93c363262023",
+    "name": "Dataverse Access Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open source research data repository software.",
+      "type": "text/plain"
+    }
+  }
+}

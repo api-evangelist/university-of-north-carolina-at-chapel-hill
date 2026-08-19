@@ -1,0 +1,281 @@
+{
+  "item": [
+    {
+      "id": "ca5714e2-a7af-44cc-99f1-a11e542929e3",
+      "name": "Mydata",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e4a28c10-33b3-4a68-958b-5ac7fd5e6026",
+          "name": "Data Retriever API retrieve My Data As Json String",
+          "request": {
+            "name": "Data Retriever API retrieve My Data As Json String",
+            "description": {},
+            "url": {
+              "path": [
+                "mydata",
+                "retrieve"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "dataset_valid",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dataset_valid",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dvobject_types",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dvobject_types",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter_validities",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "mydata_search_term",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "published_states",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "published_states",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "role_ids",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "role_ids",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "selected_page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "userIdentifier",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "116ddb67-9708-46bc-9587-e3a945cf8d0a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mydata",
+                    "retrieve"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "dataset_valid",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "dataset_valid",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "dvobject_types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dvobject_types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter_validities",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "mydata_search_term",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "published_states",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "published_states",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "role_ids",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "role_ids",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "selected_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "userIdentifier",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3368180c-a87c-4bcc-aa35-5a420b144b53",
+          "name": "Data Retriever API retrieve My Collection List",
+          "request": {
+            "name": "Data Retriever API retrieve My Collection List",
+            "description": {},
+            "url": {
+              "path": [
+                "mydata",
+                "retrieve",
+                "collectionList"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "userIdentifier",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2391fba3-a528-4e68-80e9-1f46f73015b3",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mydata",
+                    "retrieve",
+                    "collectionList"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "userIdentifier",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://dataverse.unc.edu/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4c193075-ae23-46b2-922c-6572325805ae",
+    "name": "Dataverse Access Mydata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open source research data repository software.",
+      "type": "text/plain"
+    }
+  }
+}
