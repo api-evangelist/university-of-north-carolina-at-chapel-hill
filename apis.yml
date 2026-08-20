@@ -576,6 +576,8 @@ apis:
   humanURL: https://guides.dataverse.org/en/latest/api/
   baseURL: https://dataverse.unc.edu/api
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -982,6 +984,8 @@ apis:
   humanURL: https://guides.dataverse.org/en/latest/api/
   baseURL: https://dataverse.unc.edu/api
   tags:
+  - Notification
+  tags_raw:
   - Notifications
   properties:
   - type: OpenAPI
@@ -1115,7 +1119,8 @@ apis:
   description: Save Auxiliary File With Version
   humanURL: https://guides.dataverse.org/en/latest/api/
   baseURL: https://dataverse.unc.edu/api
-  tags:
+  tags: []
+  tags_raw:
   - saveAuxiliaryFileWithVersion
   properties:
   - type: OpenAPI
@@ -1217,7 +1222,8 @@ apis:
   description: Uploads a logo for a dataset
   humanURL: https://guides.dataverse.org/en/latest/api/
   baseURL: https://dataverse.unc.edu/api
-  tags:
+  tags: []
+  tags_raw:
   - uploadDatasetLogo
   properties:
   - type: OpenAPI
@@ -1252,6 +1258,8 @@ apis:
   humanURL: https://guides.dataverse.org/en/latest/api/
   baseURL: https://dataverse.unc.edu/api
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
