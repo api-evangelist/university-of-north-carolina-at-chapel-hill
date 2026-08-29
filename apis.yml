@@ -15,6 +15,18 @@ description: >-
   (such as the Facilities SPOTS REST API and campus single sign-on) are gated
   behind Onyen/Shibboleth authentication.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
@@ -1321,6 +1333,9 @@ apis:
   - type: x-json-ld
     url: json-ld/university-of-north-carolina-at-chapel-hill-context.jsonld
 common:
+  - type: CapabilityMap
+    url: capabilities/university-of-north-carolina-at-chapel-hill-capability-edges.yml
+    name: University of North Carolina at Chapel Hill Business Capability Map
   - type: AgenticAccess
     url: agentic-access/university-of-north-carolina-at-chapel-hill-agentic-access.yml
   - type: DomainSecurity
