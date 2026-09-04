@@ -31,7 +31,7 @@ deliveryModel:
   - probed
   generated: '2026-08-30'
   method: probed
-position: Consumer
+position: Consuming
 access: 3rd-Party
 accessModel:
   pricing: free
