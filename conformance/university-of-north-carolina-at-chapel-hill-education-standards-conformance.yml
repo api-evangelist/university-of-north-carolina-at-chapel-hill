@@ -1,0 +1,125 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  Live probes of University of North Carolina at Chapel Hill hosts on 2026-08-30, run as part of
+  the API Evangelist university pipeline. Every hit below points at the exact URL that returned
+  the evidence; no conformance is recorded from a prose claim.
+provider: University of North Carolina at Chapel Hill
+providerId: university-of-north-carolina-at-chapel-hill
+regime: education
+description: >-
+  Conformance of UNC-Chapel Hill's own machine-readable surfaces against the Kin Score `education`
+  regime standards (scim, lti, oneroster, ed-fi, caliper, qti, oai-pmh, shibboleth, saml, orcid,
+  datacite, crossref). Reward-only: absence below means "not found on a public surface on
+  2026-08-30", not "not in use internally". IIIF is recorded as an additional standard because it
+  is the one place UNC's own engineering meets a published interface specification, even though it
+  is not part of the education regime and is not scored by it.
+standards:
+- id: shibboleth
+  status: conformant
+  operator: institution
+  evidence:
+    url: https://sso.unc.edu/idp/shibboleth
+    status: 200
+    content_type: application/xml;charset=UTF-8
+    detail: >-
+      UNC's Shibboleth Identity Provider publishes SAML 2.0 metadata at its canonical
+      /idp/shibboleth location (6,875 bytes). The document is an <EntityDescriptor> carrying
+      entityID="https://sso.unc.edu/idp" with an <md:IDPSSODescriptor> and three
+      <md:SingleSignOnService> bindings (HTTP-POST, HTTP-POST-SimpleSign, HTTP-Redirect). The
+      host is under UNC's own registrable domain and resolves to ssop.isis.unc.edu (152.2.64.79),
+      inside UNC's own network. No vendor sits between UNC and this metadata.
+- id: saml
+  status: conformant
+  operator: institution
+  evidence:
+    url: https://mdq.incommon.org/entities/urn:mace:incommon:unc.edu
+    status: 200
+    content_type: application/samlmetadata+xml
+    detail: >-
+      UNC-Chapel Hill is a registered InCommon (and thereby eduGAIN) entity. The InCommon MDQ
+      service returns a signed SAML 2.0 EntityDescriptor for entityID urn:mace:incommon:unc.edu,
+      mdui:DisplayName "University of North Carolina at Chapel Hill", validUntil
+      2026-09-13T18:37:27Z, with two IDPSSODescriptor blocks whose SSO Locations are all under
+      https://sso.unc.edu/idp/. Note the federation registers the legacy urn: entityID while the
+      IdP's own metadata endpoint declares https://sso.unc.edu/idp; both describe the same IdP.
+      Federation membership is an institution-operated fact by definition.
+- id: oai-pmh
+  status: conformant
+  operator: institution
+  evidence:
+    url: https://dataverse.unc.edu/oai?verb=Identify
+    status: 200
+    content_type: text/xml;charset=UTF-8
+    detail: >-
+      UNC Dataverse answers OAI-PMH 2.0 Identify on UNC's own host. <repositoryName>UNC Dataverse
+      Dataverse OAI Archive</repositoryName>, <protocolVersion>2.0</protocolVersion>,
+      <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>, earliestDatestamp 2016-11-09T02:00:50Z,
+      gzip and deflate compression advertised. dataverse.unc.edu CNAMEs to
+      dataverse-aws.irss.unc.edu, an AWS deployment in UNC's own Odum Institute / IRSS account —
+      the harvesting endpoint and the metadata behind it are UNC's, even though the repository
+      software is Dataverse's. Recorded as `institution` for that reason: OAI-PMH is an open
+      standard, not a product contract.
+  additional_evidence:
+  - url: https://dataverse.unc.edu/oai?verb=ListSets
+    status: 200
+  - url: https://dataverse.unc.edu/oai?verb=ListMetadataFormats
+    status: 200
+- id: datacite
+  status: conformant
+  operator: institution
+  evidence:
+    url: https://dataverse.unc.edu/oai?verb=ListMetadataFormats
+    status: 200
+    content_type: text/xml;charset=UTF-8
+    detail: >-
+      The UNC Dataverse OAI-PMH archive advertises DataCite metadata for harvesting: the
+      ListMetadataFormats response returns metadataPrefix values `Datacite` and `oai_datacite`
+      alongside `oai_dc`, `oai_ddi` and `dataverse_json`. UNC's research datasets are registered
+      with DOIs under the DataCite schema and that registration is exposed on a public,
+      keyless, institution-hosted endpoint.
+- id: iiif
+  status: conformant
+  operator: institution
+  in_regime: false
+  evidence:
+    url: https://dcr.lib.unc.edu/services/api/iiif/v3/bfe93126-849a-43a5-b9d9-391e18ffacc6/manifest
+    status: 200
+    content_type: application/json
+    detail: >-
+      The Carolina Digital Repository serves IIIF Presentation API 3.0 manifests
+      ("@context":"http://iiif.io/api/presentation/3/context.json", "type":"Manifest") and IIIF
+      Image API 3.0 image information
+      ("@context":"http://iiif.io/api/image/3/context.json", "type":"ImageService3",
+      "protocol":"http://iiif.io/api/image") from box-c, the repository application UNC Libraries
+      itself writes and maintains at https://github.com/UNC-Libraries/box-c. Both endpoints are
+      keyless and returned 200 on 2026-08-30. This is UNC's own engineering conforming to a
+      published specification, and it is the strongest contract evidence in this repository.
+  additional_evidence:
+  - url: https://dcr.lib.unc.edu/services/api/iiif/v3/bfe93126-849a-43a5-b9d9-391e18ffacc6/info.json
+    status: 200
+not_found:
+- id: scim
+  detail: No SCIM 2.0 /ServiceProviderConfig or provisioning endpoint found on any public UNC host.
+- id: lti
+  detail: >-
+    UNC runs Canvas (Instructure) for teaching — canvas.unc.edu and uncch.instructure.com both
+    resolve to https://edtech.unc.edu/service/canvas/ (200 on 2026-08-30) — but LTI tool
+    registration lives behind that tenant and no public LTI platform configuration or JWKS was
+    reachable. Recorded as not found rather than absent.
+- id: oneroster
+  detail: No OneRoster endpoint found; UNC is a higher-education institution and OneRoster is a K-12 standard.
+- id: ed-fi
+  detail: No Ed-Fi API found; Ed-Fi is a K-12 / state-agency standard.
+- id: caliper
+  detail: No Caliper Analytics event store or sensor endpoint found on a public host.
+- id: qti
+  detail: No QTI item bank or assessment interchange endpoint found on a public host.
+- id: orcid
+  detail: >-
+    UNC Dataverse and the Carolina Digital Repository both carry author identifiers, but no public
+    endpoint was found that exposes ORCID iDs as a declared conformance surface. Not claimed.
+- id: crossref
+  detail: >-
+    UNC deposits DOIs through DataCite (see above), not Crossref, on the surfaces probed. No
+    Crossref deposit or query surface operated by UNC was found.

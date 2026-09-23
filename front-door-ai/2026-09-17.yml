@@ -1,0 +1,21 @@
+# Front Door AI Index — university-of-north-carolina-at-chapel-hill — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: university-of-north-carolina-at-chapel-hill
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: dcr.lib.unc.edu
+  final_host: dcr.lib.unc.edu
+  ownership: own
+  owner: university-of-north-carolina-at-chapel-hill
+  shares_host_with: null
+  inherited_from: null
+  verdict: thin
+  score: null
+  host_score: null
+  density: null
+  words: 3
+  tiers: null
+  ambiguous: null
+  top_terms: null
