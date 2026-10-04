@@ -22,15 +22,19 @@ x-category: Public Research University
 type: Index
 deliveryModel:
   model: saas
-  open_source: true
-  commercial: false
-  callable_host: true
+  license_evidence:
+    not_product:
+    - unc-libraries/disco-ingest
+  open_source: unknown
+  commercial: true
+  callable_host: false
   label: Hosted service · you call their endpoint
-  confidence: medium
+  confidence: low
   source:
-  - probed
-  generated: '2026-08-30'
-  method: probed
+  - pricing
+  - repository-not-product
+  generated: '2026-09-25'
+  method: derived
 position: Consuming
 access: 3rd-Party
 accessModel:
@@ -63,7 +67,7 @@ tags:
 - Course Catalog
 - Identity Federation
 - Geospatial
-- Open-Source
+- Open Source
 tags_raw:
 - Education
 - Higher Education
@@ -81,6 +85,7 @@ tags_raw:
 - Identity Federation
 - Geospatial
 - Open Source
+- Open-Source
 created: '2026-06-03'
 modified: '2026-08-30'
 specificationVersion: '0.23'
@@ -113,13 +118,14 @@ apis:
   - Digital Library
   - IIIF
   - Search
-  - Open-Source
+  - Open Source
   tags_raw:
   - Research Repository
   - Digital Library
   - IIIF
   - Search
   - Open Source
+  - Open-Source
   properties:
   - type: Documentation
     url: https://github.com/UNC-Libraries/box-c
