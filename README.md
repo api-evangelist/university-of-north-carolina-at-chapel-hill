@@ -1,4 +1,4 @@
-# University of North Carolina at Chapel Hill (university-of-north-carolina-at-chapel-hill)
+# University of North Carolina at Chapel Hill
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,76 +64,122 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The University of North Carolina at Chapel Hill is a public research university in Chapel Hill, North Carolina, a member of the Association of American Universities and the flagship of the University of North Carolina System. It operates no central developer portal, no API gateway and publishes no OpenAPI of its own, but it does run several genuinely institution-engineered machine-readable surfaces — most notably the Carolina Digital Repository services API and its IIIF 3.0 endpoints, served by box-c, a repository application UNC Libraries writes and maintains in the open. The rest of the footprint is tenant relationships on vendor platforms, and those contracts are not credited to UNC.
+The University of North Carolina at Chapel Hill is a public research university in Chapel Hill, North Carolina, a member of the Association of American Universities and the flagship of the seventeen-campus University of North Carolina System. It operates no central developer portal, no API gateway, and publishes no OpenAPI of its own — but it does run several genuinely institution-engineered machine-readable surfaces. The strongest is the Carolina Digital Repository services API at dcr.lib.unc.edu, including IIIF Presentation 3.0 and Image 3.0 endpoints, served by box-c, a repository application UNC Libraries writes and maintains in the open on GitHub. Alongside it are two Blacklight JSON search APIs on UNC's own hardware (the TRLN Discovery library catalog and the Wilson Library finding aids), an OAI-PMH 2.0 archive on UNC Dataverse advertising DataCite metadata, and UNC's own Shibboleth/InCommon SAML 2.0 metadata. The rest of the programmable footprint is tenant relationships rather than UNC engineering: the UNC Dataverse native REST API is the Dataverse product's contract, the course-catalog search API is Leepfrog CourseLeaf's, the GIS open-data hub is Esri ArcGIS Hub's, and the Digital Collections search at dc.lib.unc.edu is OCLC CONTENTdm. The Facilities SPOTS REST API is institution-operated but its documentation is entirely Onyen-gated and could not be read.
 
-- APIs.json: https://raw.githubusercontent.com/api-evangelist/university-of-north-carolina-at-chapel-hill/refs/heads/main/apis.yml
-- Run with Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=university-of-north-carolina-at-chapel-hill-api-evangelist&utm_content=repo
+**Areas:** Education · Higher Education · University · Public Research University · United States · North Carolina · University of North Carolina System · Association of American Universities · Research Data · Open Data · Digital Library · Library
 
-## Type
+## University of North Carolina at Chapel Hill on APIs.io
 
-- Index
-- Consumer
-- 3rd-Party
+Everything profiled for University of North Carolina at Chapel Hill is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/university-of-north-carolina-at-chapel-hill/](https://apis.io/providers/university-of-north-carolina-at-chapel-hill/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-Education, Higher Education, University, Public Research University, United States, North Carolina, University of North Carolina System, Association of American Universities, Research Data, Open Data, Digital Library, Library, Course Catalog, Identity Federation, Geospatial, Open Source
+- [Carolina Digital Repository Services API (box-c)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/cdr-services-api/) — Public, keyless JSON API behind the Carolina Digital Repository, UNC Libraries' institutional repository for digitized special collections, theses,…
+- [UNC Libraries Catalog Search API (TRLN Discovery / Blacklight)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/library-catalog-search/) — The UNC University Library catalog answers machine-readable search over its full bibliographic index at /catalog.json, the Blacklight JSON response format,…
+- [UNC Finding Aids Search API (Blacklight JSON:API)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/finding-aids-search/) — Machine-readable search across the finding aids of the Wilson Special Collections Library, served at /catalog.json in Blacklight's JSON:API form — a `links`…
+- [UNC Dataverse OAI-PMH Archive](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/dataverse-oai-pmh/) — OAI-PMH 2.0 harvesting endpoint for the UNC Dataverse research data repository, operated by the Odum Institute / Institute for Research in Social Science.…
+- [UNC Shibboleth Identity Provider (SAML 2.0 / InCommon)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/shibboleth-idp/) — UNC's Onyen single sign-on is a Shibboleth Identity Provider that publishes SAML 2.0 metadata at its canonical /idp/shibboleth location — an…
+- [Facilities SPOTS REST API](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/facilities-spots/) — REST API for the Space Planning and Occupancy Tracking System run by UNC Facilities Services, the campus system of record for building and room space data.…
+- [UNC Dataverse Native REST API (Dataverse deployment)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/dataverse-native-api/) — UNC Dataverse, the Odum Institute's research data repository, runs Dataverse 6.8 and exposes the Dataverse Native REST API at /api. GET /api/info/version is…
+- [UNC Catalog Course Search API (CourseLeaf)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/course-catalog-search/) — The University Catalog exposes a keyless JSON course-search API at /course-search/api/?page=fose&route=search. A POST carrying a criteria array returns…
+- [UNC GIS Open Data Hub (ArcGIS Hub DCAT-US)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/gis-opendata/) — UNC-Chapel Hill's campus open-data site for geospatial and institutional datasets, published through ArcGIS Hub. The DCAT-US 1.1 catalog feed at…
+- [UNC Digital Collections Search (OCLC CONTENTdm)](https://apis.io/apis/university-of-north-carolina-at-chapel-hill/digital-collections/) — "Search the Special Collections", UNC University Library's discovery layer over its digitized special collections. A WordPress front at the root fronts an…
 
-## APIs
+### Published properties
 
-Every surface carries an `x-operator` in `apis.yml`: **institution** means UNC runs the thing the
-contract describes, **tenant** means UNC's data on a vendor's contract. Only the institution rows
-are UNC's own engineering.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**Institution-operated**
+#### Vocabulary (1)
 
-- **Carolina Digital Repository Services API (box-c)** — Keyless JSON search over 2.1M records plus IIIF Presentation 3.0 manifests and IIIF Image 3.0 info. Base: https://dcr.lib.unc.edu/services/api | Source: https://github.com/UNC-Libraries/box-c
-- **UNC Libraries Catalog Search API** — TRLN Discovery / Blacklight JSON. Base: https://catalog.lib.unc.edu/catalog.json
-- **UNC Finding Aids Search API** — Blacklight JSON:API over Wilson Special Collections finding aids. Base: https://finding-aids.lib.unc.edu/catalog.json
-- **UNC Dataverse OAI-PMH Archive** — OAI-PMH 2.0, advertising oai_dc, oai_ddi, dataverse_json, Datacite and oai_datacite. Base: https://dataverse.unc.edu/oai
-- **UNC Shibboleth Identity Provider** — SAML 2.0 metadata; InCommon entity `urn:mace:incommon:unc.edu`. Base: https://sso.unc.edu/idp
-- **Facilities SPOTS REST API** — Institution-operated but entirely Onyen-gated; no contract detail is publicly readable. Docs: https://facilities.unc.edu/resources/mapping-and-space/spots-rest-api/
+The provider's domain terms, defined.
 
-**Tenant relationships (vendor contract, UNC's data)**
+- [UNC Dataverse API Vocabulary](https://apis.io/vocabularies/university-of-north-carolina-at-chapel-hill/university-of-north-carolina-at-chapel-hill-vocabulary/)
 
-- **UNC Dataverse Native REST API** — Dataverse 6.8's contract, shipped by eight institutions in this catalog. Base: https://dataverse.unc.edu/api
-- **UNC Catalog Course Search API** — Leepfrog CourseLeaf (`catalog.unc.edu` CNAME `unc-public.courseleaf.com`). Base: https://catalog.unc.edu/course-search/api/
-- **UNC GIS Open Data Hub** — Esri ArcGIS Hub, DCAT-US 1.1 feed. Base: https://gisdata-uncadmin.opendata.arcgis.com/api/feed/dcat-us/1.1.json
-- **UNC Digital Collections Search** — OCLC CONTENTdm 6.10 on a UNC host. Site: https://dc.lib.unc.edu/
+#### Security (1)
 
-## Conformance
+Authentication, trust centre, and vulnerability disclosure.
 
-- [conformance/university-of-north-carolina-at-chapel-hill-education-standards-conformance.yml](conformance/university-of-north-carolina-at-chapel-hill-education-standards-conformance.yml) — `shibboleth`, `saml`, `oai-pmh`, `datacite` conformant against the Kin Score `education` regime, plus IIIF (out of regime).
+- [University Of North Carolina At Chapel Hill Domain Security](https://apis.io/security/university-of-north-carolina-at-chapel-hill/university-of-north-carolina-at-chapel-hill-domain-security/)
 
-## Plans / Rate Limits / FinOps
+#### Plans and pricing (1)
 
-- Plans: [plans/university-of-north-carolina-at-chapel-hill-plans-pricing.yml](plans/university-of-north-carolina-at-chapel-hill-plans-pricing.yml)
-- Rate Limits: [rate-limits/university-of-north-carolina-at-chapel-hill-rate-limits.yml](rate-limits/university-of-north-carolina-at-chapel-hill-rate-limits.yml)
-- FinOps: [finops/university-of-north-carolina-at-chapel-hill-finops.yml](finops/university-of-north-carolina-at-chapel-hill-finops.yml)
+Published plans, tiers and prices.
 
-## Timestamps
+- [University Of North Carolina At Chapel Hill Plans Pricing](https://apis.io/plans/university-of-north-carolina-at-chapel-hill/university-of-north-carolina-at-chapel-hill-plans-pricing/)
 
-- Created: 2026-06-03
-- Modified: 2026-08-30
+#### Rate limits (1)
 
-## Common Properties
+Published request limits.
 
-- Website: https://www.unc.edu/
-- GitHub: https://github.com/UNC-Libraries
-- Identity Federation: https://sso.unc.edu/idp/shibboleth | https://mdq.incommon.org/entities/urn:mace:incommon:unc.edu
-- Research Computing: https://help.rc.unc.edu/
-- AI Policy: https://ai.unc.edu/ai-guidance-for-faculty/
-- LinkedIn: https://www.linkedin.com/school/unc-chapel-hill/
-- Authentication: https://sso.unc.edu/ (Onyen / Shibboleth single sign-on)
-- Review: [review.yml](review.yml)
+- [University Of North Carolina At Chapel Hill Rate Limits](https://apis.io/rate-limits/university-of-north-carolina-at-chapel-hill/university-of-north-carolina-at-chapel-hill-rate-limits/)
 
-## Notes
+#### FinOps (1)
 
-- **Re-profiled 2026-08-30 under the API Evangelist university pipeline.** Thirty-six per-tag OpenAPI documents, their pristine `openapi/_original/` source spec, and 84 artifacts derived from them (73 Postman/OpenCollection files, 2 JSON Schema, 2 JSON Structure, 2 examples, 1 JSON-LD context, 1 vocabulary, 2 Spectral rulesets, 1 agentic-access) were removed — 122 files in all. They were the Dataverse product's own contract — `info.title: "Dataverse API"`, `info.description: "Open source research data repository software."` — split by tag, and the same normalized titles are shipped by eight other institutions in this catalog. The deployment is real and is kept as a tenant surface; the product's spec is not credited to UNC.
-- **Correction:** an earlier profile described `dc.lib.unc.edu` as running box-c. It does not — that host serves OCLC CONTENTdm 6.10. box-c is genuinely UNC Libraries' own software, and it runs the Carolina Digital Repository at `dcr.lib.unc.edu`, which is now recorded as UNC's strongest institution-operated API.
-- The Facilities SPOTS REST API documentation is Onyen-gated and not publicly accessible.
-- No single unified public developer portal, API gateway, API terms of service or first-party OpenAPI was found. `api.unc.edu` and `data.unc.edu` do not resolve. No endpoints were fabricated.
+What the API costs to run, by operation.
 
-## Maintainers
+- [University Of North Carolina At Chapel Hill Finops](https://apis.io/finops/university-of-north-carolina-at-chapel-hill/university-of-north-carolina-at-chapel-hill-finops/)
 
-- Kin Lane — kin@apievangelist.com
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.unc.edu/)
+- [Documentation](https://github.com/UNC-Libraries/box-c)
+- [Support](https://help.unc.edu/)
+- [Blog](https://www.unc.edu/feed/)
+- [Terms of service](https://policies.unc.edu/)
+- [Privacy policy](https://www.unc.edu/about/privacy-statement/)
+- [GitHub](https://github.com/UNC-Libraries)
+
+## API Evangelist rating
+
+**Kin Score 19.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 4.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 26.3 |
+
+**Agent readiness 3.1** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/university-of-north-carolina-at-chapel-hill/](https://apis.io/providers/university-of-north-carolina-at-chapel-hill/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for University of North Carolina at Chapel Hill: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/university-of-north-carolina-at-chapel-hill/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
